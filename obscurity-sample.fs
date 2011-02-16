@@ -10,4 +10,4 @@ let switchCase c =
 	| _ -> c
 
 let shiftChar dist (c: char) = (char)((int)c + dist)
-let scramble = explode >> Array.rev >> Array.map switchCase >> Array.map (shiftChar 1) >> implode
+let scramble = explode >> Array.rev >> Array.map (switchCase >> shiftChar 1) >> implode
