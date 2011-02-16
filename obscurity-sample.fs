@@ -1,5 +1,8 @@
 open System
 
+let reverse = Array.rev
+let map = Array.map
+
 let explode (s: string) = s |> Seq.toArray
 let implode (cs: char[]) = new string(cs)
 
@@ -9,5 +12,5 @@ let switchCase c =
 	| _ when Char.IsLower c -> Char.ToUpper c
 	| _ -> c
 
-let shiftChar dist (c: char) = (char)((int)c + dist)
-let scramble = explode >> Array.rev >> Array.map (switchCase >> shiftChar 1) >> implode
+let shiftLetter distance (c: char) = (char)((int)c + distance)
+let scramble = explode >> reverse >> map (switchCase >> shiftLetter 1) >> implode
