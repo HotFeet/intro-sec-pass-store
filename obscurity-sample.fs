@@ -1,5 +1,5 @@
 //
-// Sample for "Securite by Obscurity"
+// Sample for "Security by Obscurity"
 //
 // Authors:
 // Juraj Skripsky <js@hotfeet.ch>
